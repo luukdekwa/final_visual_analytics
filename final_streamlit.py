@@ -12,6 +12,7 @@ import warnings
 import plotly.graph_objects as go
 import streamlit as st
 from pandas.core.common import SettingWithCopyWarning
+import statsmodels.api as sm
 
 warnings.simplefilter(action="ignore", category=SettingWithCopyWarning)
 
