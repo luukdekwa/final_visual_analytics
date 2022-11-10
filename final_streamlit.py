@@ -10,26 +10,7 @@ import numpy as np
 import plotly.express as px
 import warnings
 import plotly.graph_objects as go
-import pandas as pd
-import geopandas as gpd
-import numpy as np
-import requests
-import seaborn
-#import json
-import plotly.express as px
-import plotly.figure_factory as ff
-from shapely.geometry import Point
-#!pip install missingno
-#import missingno as msno
-import statsmodels.api as sm
-#!pip install streamlit
 import streamlit as st
-import folium
-import streamlit_folium as st_folium
-from streamlit_folium import folium_static
-#import branca
-#import datetime
-#import math
 from pandas.core.common import SettingWithCopyWarning
 
 warnings.simplefilter(action="ignore", category=SettingWithCopyWarning)
@@ -119,14 +100,6 @@ def ziekte_per_aantal(df, list_of_columns):
 
 
 df_100k = ziekte_per_aantal(df2, list_of_columns)
-
-
-
-
-
-
-
-
 
 fig_scatter_1 = px.scatter(df2, x="populatie", y="Meningitis", color = "Country/Territory", trendline = "ols")
 fig_scatter_1.update_layout(showlegend=False)
